@@ -4,22 +4,37 @@
   <meta charset="UTF-8">
   <title>Eternal Dawn Wiki</title>
   <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  
   <style>
-    body {
+    /* Loader Styling */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black url('https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif') no-repeat center center;
+      background-size: 150px 150px;
+      z-index: 10000;
+    }
+
+    /* Page Styling */
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Uncial Antiqua', cursive;
+      background: #0d0d0d;
+    }
+    .overlay {
       background-image: url('https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      font-family: 'Uncial Antiqua', cursive;
-      color: #f5f5f5;
-      text-align: center;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 60px 20px;
       min-height: 100vh;
+      text-align: center;
+      padding: 60px 20px;
+      color: #f5f5f5;
     }
     h1 {
       font-family: 'Pirata One', cursive;
@@ -51,20 +66,31 @@
       box-shadow: 0 0 25px #ff6600;
     }
   </style>
+
+  <script>
+    window.onload = function() {
+      document.getElementById("loader").style.display = "none";
+    }
+  </script>
 </head>
+
 <body>
 
-  <div class="overlay">
-    <h1>🏴‍☠️ Eternal Dawn Wiki 🏴‍☠️</h1>
-    <p>Set sail into the cursed seas of legends!</p>
+<!-- Loader -->
+<div id="loader"></div>
 
-    <a href="characters.html" class="button">Characters</a>
-    <a href="crew.html" class="button">Crew</a>
-    <a href="bounty.html" class="button">Bounties</a>
-    <a href="locations.html" class="button">Locations</a>
-    <a href="izumi.html" class="button">Izumi</a>
-    <a href="izana.html" class="button">Izana</a>
-  </div>
+<!-- Main Content -->
+<div class="overlay">
+  <h1>🏴‍☠️ Eternal Dawn Wiki 🏴‍☠️</h1>
+  <p>Set sail into the cursed seas of legends!</p>
+
+  <a href="characters.html" class="button">Characters</a>
+  <a href="crew.html" class="button">Crew</a>
+  <a href="bounty.html" class="button">Bounties</a>
+  <a href="locations.html" class="button">Locations</a>
+  <a href="izumi.html" class="button">Izumi</a>
+  <a href="izana.html" class="button">Izana</a>
+</div>
 
 </body>
 </html>
