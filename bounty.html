@@ -26,7 +26,6 @@
       color: #ffffff;
       text-decoration: none;
       border-radius: 6px;
-      font-family: 'Roboto', sans-serif;
       border: 1px solid #555;
       transition: background-color 0.3s, transform 0.2s;
     }
@@ -97,13 +96,27 @@
       font-size: 32px;
       color: #66ffe0;
     }
-  </style>
-
-  <script>
-    function searchWiki() {
-      alert("🔎 Search feature coming soon, captain!");
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      font-size: 30px;
+      background-color: #282828;
+      color: #ffcc00;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-align: center;
+      text-decoration: none;
+      border: 2px solid #555;
+      display: none;
+      transition: background-color 0.3s, transform 0.3s;
     }
-  </script>
+    .back-to-top:hover {
+      background-color: #444;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
 <body>
@@ -115,8 +128,8 @@
 
 <!-- Search Bar -->
 <div class="search-bar">
-  <input type="text" placeholder="Search the wiki...">
-  <button onclick="searchWiki()">
+  <input type="text" id="searchInput" onkeyup="searchBounty()" placeholder="Search the wiki...">
+  <button onclick="searchBounty()">
     <i class="fas fa-binoculars"></i> Search
   </button>
 </div>
@@ -238,6 +251,56 @@
     <td>High evasion, able to manipulate perception and terrain with curse illusions</td>
   </tr>
 </table>
+
+<!-- Floating Back to Top Compass -->
+<a href="#" class="back-to-top" title="Back to Top">
+  🧭
+</a>
+
+<!-- Full Script: Live Search + Back to Top -->
+<script>
+  function searchBounty() {
+    const input = document.getElementById("searchInput").value.toUpperCase();
+    const tables = document.querySelectorAll("table");
+
+    tables.forEach(table => {
+      const rows = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName("td");
+        let found = false;
+
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].innerText.toUpperCase().indexOf(input) > -1) {
+            found = true;
+            break;
+          }
+        }
+
+        rows[i].style.display = found ? "" : "none";
+      }
+    });
+  }
+
+  window.onscroll = function() {
+    const backToTop = document.querySelector(".back-to-top");
+    if (document.documentElement.scrollTop > 300 || document.body.scrollTop > 300) {
+      backToTop.style.display = "block";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const backToTop = document.querySelector(".back-to-top");
+    if (backToTop) {
+      backToTop.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
