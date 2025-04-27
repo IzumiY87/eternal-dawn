@@ -1,173 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Pirate Bounties</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #121212;
-            color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-        }
-        h1, h2 {
-            text-align: center;
-            color: #ffcc00;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            background-color: #1e1e1e;
-        }
-        th, td {
-            padding: 12px 15px;
-            border: 1px solid #333;
-            text-align: left;
-        }
-        th {
-            background-color: #333;
-            color: #ffcc00;
-        }
-        tr:hover {
-            background-color: #2a2a2a;
-        }
-        .group-title {
-            margin-top: 50px;
-            font-size: 24px;
-            text-align: center;
-            color: #00ffff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Eyepatch Pirates & Spade Pirates Bounties</title>
+
+  <!-- Import Roboto Font and FontAwesome for icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Roboto', sans-serif;
+      color: #f0f0f0;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background: linear-gradient(45deg, #ff9900, #ff3300);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.4s;
+      box-shadow: 0 0 15px #ff6600;
+      font-family: 'Roboto', sans-serif;
+    }
+    .button:hover {
+      background: linear-gradient(45deg, #ff3300, #ff9900);
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #ff6600;
+    }
+    h1 {
+      color: #ffcc00;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background-color: #333;
+      color: #ff9900;
+      font-size: 20px;
+    }
+    td {
+      font-size: 18px;
+    }
+    tr:hover {
+      background-color: #292929;
+    }
+    .section-title {
+      margin-top: 50px;
+      font-size: 32px;
+      color: #66ffe0;
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>WANTED: Bounties of the Pirate Crews</h1>
+<!-- Home Button -->
+<a href="index.html" class="button">
+  <i class="fas fa-ship"></i> Home
+</a>
 
-    <h2 class="group-title">☠️ Eyepatch Pirates ☠️</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Bounty (Million Quer)</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Izumi</td>
-                <td>Captain</td>
-                <td>480</td>
-                <td>Mastered his cursed eye, defeated Lord Draegon, high threat</td>
-            </tr>
-            <tr>
-                <td>Keal</td>
-                <td>Vice Captain / Swordsman</td>
-                <td>320</td>
-                <td>Lead strategist, elite fighter, led combat units</td>
-            </tr>
-            <tr>
-                <td>Lena</td>
-                <td>Sniper</td>
-                <td>250</td>
-                <td>Deadly accurate, major asset in key battles</td>
-            </tr>
-            <tr>
-                <td>Isla</td>
-                <td>Navigator</td>
-                <td>160</td>
-                <td>Navigated through cursed waters and storm raids</td>
-            </tr>
-            <tr>
-                <td>Sota</td>
-                <td>Mage / Curse Expert</td>
-                <td>300</td>
-                <td>Ancient curse knowledge, stabilized Izumi’s power</td>
-            </tr>
-            <tr>
-                <td>Renji</td>
-                <td>Martial Artist / Brawler</td>
-                <td>180</td>
-                <td>Hand-to-hand expert, broke through fortress defenses</td>
-            </tr>
-            <tr>
-                <td>Naia</td>
-                <td>Illusionist</td>
-                <td>150</td>
-                <td>Used illusions to destabilize Draegon’s forces</td>
-            </tr>
-            <tr>
-                <td>Juno</td>
-                <td>Engineer / Gadgeteer</td>
-                <td>90</td>
-                <td>Designed weapons, tech traps, and saboteur tools</td>
-            </tr>
-            <tr>
-                <td>Myra</td>
-                <td>Beast Tamer / Scout</td>
-                <td>110</td>
-                <td>Tamed battle beasts, led jungle infiltration missions</td>
-            </tr>
-            <tr>
-                <td>Flint</td>
-                <td>Ex-Captain / Strategist</td>
-                <td>270</td>
-                <td>Former pirate legend, key tactician in siege battle</td>
-            </tr>
-        </tbody>
-    </table>
+<h1>Eyepatch Pirates Bounties</h1>
 
-    <h2 class="group-title">♠️ Spade Pirates ♠️</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Bounty (Million Quer)</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Izana</td>
-                <td>Captain</td>
-                <td>1100</td>
-                <td>Twin flamebearer, awakened right cursed eye, co-wielder of Sol’mar’s power</td>
-            </tr>
-            <tr>
-                <td>Koya</td>
-                <td>Vice Captain / Assassin</td>
-                <td>869</td>
-                <td>Stealth and shadow master, survived against Reapers</td>
-            </tr>
-            <tr>
-                <td>Taron</td>
-                <td>Weapons Specialist</td>
-                <td>430</td>
-                <td>Expert in cursed tech & dismantling divine traps</td>
-            </tr>
-            <tr>
-                <td>Mira</td>
-                <td>Curseweaver / Ritualist</td>
-                <td>395</td>
-                <td>Channeler of forbidden runes, supporter in flamebearer trials</td>
-            </tr>
-            <tr>
-                <td>Drek</td>
-                <td>Bruiser / Brawler</td>
-                <td>360</td>
-                <td>Broke through voidglass armor barehanded</td>
-            </tr>
-            <tr>
-                <td>Luze</td>
-                <td>Scout / Illusionist</td>
-                <td>270</td>
-                <td>Manipulates terrain and perception with curse illusions</td>
-            </tr>
-        </tbody>
-    </table>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Bounty (Million Quer)</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Izumi</td>
+    <td>Captain</td>
+    <td>480</td>
+    <td>Mastered his cursed eye, defeated Lord Draegon, high threat</td>
+  </tr>
+  <tr>
+    <td>Keal</td>
+    <td>Vice Captain / Swordsman</td>
+    <td>320</td>
+    <td>Lead strategist, elite fighter, led combat units</td>
+  </tr>
+  <tr>
+    <td>Lena</td>
+    <td>Sniper</td>
+    <td>250</td>
+    <td>Deadly accurate, major asset in key battles</td>
+  </tr>
+  <tr>
+    <td>Isla</td>
+    <td>Navigator</td>
+    <td>160</td>
+    <td>Navigated through cursed waters and storm raids</td>
+  </tr>
+  <tr>
+    <td>Sota</td>
+    <td>Mage / Curse Expert</td>
+    <td>300</td>
+    <td>Ancient curse knowledge, stabilized Izumi’s power</td>
+  </tr>
+  <tr>
+    <td>Renji</td>
+    <td>Martial Artist / Brawler</td>
+    <td>180</td>
+    <td>Hand-to-hand expert, broke through fortress defenses</td>
+  </tr>
+  <tr>
+    <td>Naia</td>
+    <td>Illusionist</td>
+    <td>150</td>
+    <td>Used illusions to destabilize Draegon’s forces</td>
+  </tr>
+  <tr>
+    <td>Juno</td>
+    <td>Engineer / Gadgeteer</td>
+    <td>90</td>
+    <td>Designed weapons, tech traps, and saboteur tools</td>
+  </tr>
+  <tr>
+    <td>Myra</td>
+    <td>Beast Tamer / Scout</td>
+    <td>110</td>
+    <td>Tamed battle beasts, led jungle infiltration missions</td>
+  </tr>
+  <tr>
+    <td>Flint</td>
+    <td>Ex-Captain / Strategist</td>
+    <td>270</td>
+    <td>Former pirate legend, key tactician in siege battle</td>
+  </tr>
+</table>
+
+<h2 class="section-title">Spade Pirates Bounties</h2>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Role</th>
+    <th>Bounty (Million Quer)</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Izana</td>
+    <td>Captain</td>
+    <td>1100</td>
+    <td>Twin flamebearer, awakened right cursed eye, co-wielder of Sol’mar’s power</td>
+  </tr>
+  <tr>
+    <td>Koya</td>
+    <td>Vice Captain / Assassin</td>
+    <td>869</td>
+    <td>Stealth and shadow master, has fought and survived against Reapers</td>
+  </tr>
+  <tr>
+    <td>Taron</td>
+    <td>Weapons Specialist</td>
+    <td>430</td>
+    <td>Expert in cursed tech & dismantling divine traps</td>
+  </tr>
+  <tr>
+    <td>Mira</td>
+    <td>Curseweaver / Ritualist</td>
+    <td>395</td>
+    <td>Channeler of forbidden runes, supporter in flamebearer trials</td>
+  </tr>
+  <tr>
+    <td>Drek</td>
+    <td>Bruiser / Brawler</td>
+    <td>360</td>
+    <td>Physically unmatched in raw strength, broke through voidglass armor barehanded</td>
+  </tr>
+  <tr>
+    <td>Luze</td>
+    <td>Scout / Illusionist</td>
+    <td>270</td>
+    <td>High evasion, able to manipulate perception and terrain with curse illusions</td>
+  </tr>
+</table>
 
 </body>
 </html>
